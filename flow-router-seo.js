@@ -29,6 +29,7 @@ FlowRouterSEO = function(config) {
 
     // Remove all existing meta tags that this package has added
     $('head meta[data-flow-router-seo="true"]').remove();
+    $('head link[data-flow-router-seo="true"]').remove();
 
     // Set title if specified otherwise use the default empty string title
     document.title = settings.title;
@@ -36,6 +37,12 @@ FlowRouterSEO = function(config) {
     // Set the description before the other meta tags as
     // other tags are generated from the meta description
     if (settings.description) $('head').append('<meta name="description" content="' + self._escapeHTML(settings.description) + '" data-flow-router-seo="true" />');
+
+    // Set canonical url tag 
+    if (settings.url) {
+      console.log(">>> package add " + settings.url)
+      $('head').append('<link rel="canonical" content="' + settings.url + '" data-flow-router-seo="true" />');    
+    }
 
     // Set meta tags
     _.each(settings.meta, function(value, key) {

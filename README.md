@@ -1,6 +1,8 @@
 SEO for Flow Router
 ==========================
 
+This is a fork of tomwasd/flow-router-seo to support canonical tag.
+
 This package aims to simplify setting title and meta tags for Meteor apps that use [Flow Router](https://atmospherejs.com/kadira/flow-router).
 
 Why?
@@ -74,6 +76,7 @@ You can set the title and meta tags within the `onCreated` function of a templat
 
     Template.templateName.onCreated(function() {
       SEO.set({
+        url: 'https://example.url/canonical',
         title: 'Title for this template',
         description: 'Description for this template',
         meta: {
@@ -138,5 +141,4 @@ that you use `upsert` to avoid errors in trying to create an entry for the same 
 Preservation of existing tags
 -----------------------------
 
-Other than the title, Flow Router SEO will only change meta tags that it has inserted. If you already have meta
-tags declared elsewhere in your app they won't get touched!
+Other than the title, Flow Router SEO will only change meta tags that it has inserted. If you already have meta tags declared elsewhere in your app they won't get touched!
