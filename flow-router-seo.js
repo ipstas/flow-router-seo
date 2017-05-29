@@ -40,9 +40,6 @@ FlowRouterSEO = function(config) {
 
     // Set canonical url tag 
     if (settings.addCanonical || settings.canonicalUrl) {
-      console.log(settings.canonicalUrl | (self._currentUrl()));
-      console.log(settings.canonicalUrl)
-      console.log(self._currentUrl());
       $('head').append('<link rel="canonical" content="' + (settings.canonicalUrl ? settings.canonicalUrl : self._currentUrl()) + '" data-flow-router-seo="true" />');    
     }
 

@@ -88,21 +88,25 @@ There is two ways to add a canonical url tag:
 
 1) Use the default url with current params and without query params adding the property addCanonical with value true:
 
-    Template.templateName.onCreated(function() {
-      SEO.set({
-        title: 'Title for this template',
-        addCanonical: true
-      });
-    });
+```
+Template.templateName.onCreated(function() {
+  SEO.set({
+    title: 'Title for this template',
+    addCanonical: true
+  });
+});
+```
 
 2) Specify the canonical url adding the property canonicalUrl with it's value: 
 
-    Template.templateName.onCreated(function() {
-      SEO.set({
-        title: 'Title for this template',
-        canonicalUrl: "https://example.ulr/canonical"
-      });
-    });
+```
+Template.templateName.onCreated(function() {
+  SEO.set({
+    title: 'Title for this template',
+    canonicalUrl: "https://example.ulr/canonical"
+  });
+});
+```
 
 If you have dynamic content that relies on a subscription you may want to follow a pattern
 similar to this:
@@ -160,4 +164,4 @@ that you use `upsert` to avoid errors in trying to create an entry for the same 
 Preservation of existing tags
 -----------------------------
 
-Other than the title, Flow Router SEO will only change meta tags that it has inserted. If you already have meta tags declared elsewhere in your app they won't get touched!
+Other than the title, Flow Router SEO will only change meta tags and canonical url tag that it has inserted. If you already have meta tags declared elsewhere in your app they won't get touched!
