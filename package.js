@@ -1,6 +1,6 @@
 Package.describe({
   name: 'asoares:flow-router-seo',
-  version: '0.0.3',
+  version: '0.0.4',
   summary: 'A simple way to set the title and meta tags for sites using flow router',
   git: 'https://github.com/asoares/flow-router-seo',
   documentation: 'README.md'
