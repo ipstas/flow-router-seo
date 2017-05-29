@@ -76,12 +76,31 @@ You can set the title and meta tags within the `onCreated` function of a templat
 
     Template.templateName.onCreated(function() {
       SEO.set({
-        url: 'https://example.url/canonical',
         title: 'Title for this template',
         description: 'Description for this template',
         meta: {
           'property="og:image"': 'http://locationofimage.com/image.png'
         }
+      });
+    });
+
+There is two ways to add a canonical url tag:
+
+1) Use the default url with current params and without query params adding the property addCanonical with value true:
+
+    Template.templateName.onCreated(function() {
+      SEO.set({
+        title: 'Title for this template',
+        addCanonical: true
+      });
+    });
+
+2) Specify the canonical url adding the property canonicalUrl with it's value: 
+
+    Template.templateName.onCreated(function() {
+      SEO.set({
+        title: 'Title for this template',
+        canonicalUrl: "https://example.ulr/canonical"
       });
     });
 

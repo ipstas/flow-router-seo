@@ -39,9 +39,11 @@ FlowRouterSEO = function(config) {
     if (settings.description) $('head').append('<meta name="description" content="' + self._escapeHTML(settings.description) + '" data-flow-router-seo="true" />');
 
     // Set canonical url tag 
-    if (settings.url) {
-      console.log(">>> package add " + settings.url)
-      $('head').append('<link rel="canonical" content="' + settings.url + '" data-flow-router-seo="true" />');    
+    if (settings.addCanonical || settings.canonicalUrl) {
+      console.log(settings.canonicalUrl | (self._currentUrl()));
+      console.log(settings.canonicalUrl)
+      console.log(self._currentUrl());
+      $('head').append('<link rel="canonical" content="' + (settings.canonicalUrl ? settings.canonicalUrl : self._currentUrl()) + '" data-flow-router-seo="true" />');    
     }
 
     // Set meta tags
