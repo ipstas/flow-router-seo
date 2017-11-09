@@ -3,7 +3,7 @@ SEO for Flow Router
 
 This is a fork of tomwasd/flow-router-seo to support canonical tag.
 
-This package aims to simplify setting title and meta tags for Meteor apps that use [Flow Router](https://atmospherejs.com/kadira/flow-router).
+This package aims to simplify setting title and meta tags for Meteor apps that use [Flow Router](https://github.com/kadirahq/flow-router/).
 
 Why?
 ----
@@ -23,7 +23,7 @@ Installation
 Prerequisites
 ----------
 
-- [Flow Router](https://atmospherejs.com/kadira/flow-router) - that's what this package is based on!
+- [Flow Router](https://atmospherejs.com/staringatlights/flow-router) - that's what this package is based on!
 - [Spiderable](https://atmospherejs.com/meteor/spiderable) - helps web crawlers index your site
 
 Configuration
