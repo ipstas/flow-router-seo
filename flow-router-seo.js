@@ -1,6 +1,8 @@
 FlowRouterSEO = function(config) {
 
   var self = this;
+	
+	//console.log('FlowRouterSEO', config, self);
 
   if (config) {
     if (config.database) {
@@ -33,6 +35,7 @@ FlowRouterSEO = function(config) {
 
     // Set title if specified otherwise use the default empty string title
     document.title = settings.title;
+		//console.log('self._updateDOM:', self._defaults, settings, document.title);
 
     // Set the description before the other meta tags as
     // other tags are generated from the meta description
@@ -117,6 +120,7 @@ FlowRouterSEO = function(config) {
   self.set = function(settings) {
     // If the user has specified settings, update the DOM
     if (settings) self._updateDOM(settings);
+		//console.log('FlowRouterSEO set:', settings);
   };
 
   // The user can call this to initialise the router with defaults
